@@ -32,7 +32,7 @@ addBtn.addEventListener("click", () => {
     newRow.appendChild(priceCell);
 
     // 4. Insert the new row before the total row
-    table.insertBefore(newRow, totalRow);
+    totalRow.parentNode.insertBefore(newRow, totalRow);
 
     // 5. Update the grand total
     let currentTotal = parseFloat(grandTotalElement.innerText) || 0;
